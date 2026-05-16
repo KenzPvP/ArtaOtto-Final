@@ -12,34 +12,39 @@ class ContactMessageMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public string $senderName;
-    public string $senderEmail;
-    public string $senderMessage;
+    public string $name;
+    public string $email;
+    public string $whatsapp;
+    public string $clinic;
+    public string $profession;
+    public string $inquiryType;
+    public string $body; // ← BUKAN $message
 
-    /**
-     * Create a new message instance.
-     */
-    public function __construct(string $name, string $email, string $message)
-    {
-        $this->senderName = $name;
-        $this->senderEmail = $email;
-        $this->senderMessage = $message;
+    public function __construct(
+        string $name,
+        string $email,
+        string $whatsapp,
+        string $clinic,
+        string $profession,
+        string $inquiryType,
+        string $message
+    ) {
+        $this->name        = $name;
+        $this->email       = $email;
+        $this->whatsapp    = $whatsapp;
+        $this->clinic      = $clinic;
+        $this->profession  = $profession;
+        $this->inquiryType = $inquiryType;
+        $this->body        = $message; // ← assign ke $body
     }
 
-    /**
-     * Get the message envelope.
-     */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Pesan Baru dari Website ArtaOtto',
-            replyTo: [$this->senderEmail],
+            subject: "[Inquiry] {$this->inquiryType} - {$this->name}",
         );
     }
 
-    /**
-     * Get the message content definition.
-     */
     public function content(): Content
     {
         return new Content(
@@ -47,11 +52,6 @@ class ContactMessageMail extends Mailable
         );
     }
 
-    /**
-     * Get the attachments for the message.
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
     public function attachments(): array
     {
         return [];

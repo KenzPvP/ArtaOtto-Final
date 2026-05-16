@@ -23,11 +23,15 @@ class BrandController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'tagline' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
             'logo' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048'
         ]);
 
         $brand = new Brand();
         $brand->name = $request->name;
+        $brand->tagline = $request->tagline;
+        $brand->description = $request->description;
 
         if ($request->hasFile('logo')) {
             $path = $request->file('logo')->store('brand_logos', 'public');
@@ -37,6 +41,38 @@ class BrandController extends Controller
         $brand->save();
 
         return redirect()->route('admin.brands.index')->with('success', 'Brand berhasil ditambahkan');
+    }
+
+    public function edit(Brand $brand)
+    {
+        return view('admin.brands.edit', compact('brand'));
+    }
+
+    public function update(Request $request, Brand $brand)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'tagline' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,svg|max:2048'
+        ]);
+
+        $brand->name = $request->name;
+        $brand->tagline = $request->tagline;
+        $brand->description = $request->description;
+
+        if ($request->hasFile('logo')) {
+            // Delete old logo if exists
+            if ($brand->logo_path && Storage::disk('public')->exists($brand->logo_path)) {
+                Storage::disk('public')->delete($brand->logo_path);
+            }
+            $path = $request->file('logo')->store('brand_logos', 'public');
+            $brand->logo_path = $path;
+        }
+
+        $brand->save();
+
+        return redirect()->route('admin.brands.index')->with('success', 'Brand berhasil diperbarui');
     }
 
     public function destroy(Brand $brand)
@@ -70,7 +106,7 @@ class BrandController extends Controller
         }
 
         // Pagination 8 item per halaman
-        $products = $query->latest()->paginate(8);
+        $products = $query->oldest()->paginate(8);
 
         return view('brands.show', compact('brand', 'products'));
     }

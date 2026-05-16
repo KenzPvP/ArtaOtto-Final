@@ -3,9 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View; // ✅ tambahkan ini
-use App\Models\Brand; // ✅ tambahkan ini
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
+use App\Models\Brand;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,12 +14,17 @@ class AppServiceProvider extends ServiceProvider
     }
 
     public function boot(): void
-{
-    // Cek apakah tabel ada sebelum menjalankan query
-    if (Schema::hasTable('brands')) {
+    {
+        // PENTING: Jangan lakukan DB query langsung saat boot().
+        // View::composer men-defer eksekusi callback ke saat view di-render,
+        // sehingga DB query TIDAK dijalankan saat artisan/composer bootstrap.
         View::composer('layouts.app', function ($view) {
-            $view->with('brands', Brand::all());
+            try {
+                $view->with('brands', Brand::all());
+            } catch (\Exception $e) {
+                // Database tidak tersedia, kirim koleksi kosong
+                $view->with('brands', collect());
+            }
         });
     }
-}
 }

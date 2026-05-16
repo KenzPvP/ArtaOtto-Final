@@ -19,13 +19,13 @@
         <!-- Kolom Kiri: Fitur -->
         <div class="order-2 lg:order-1 flex flex-col space-y-12">
             <div class="text-right">
-                <h4 class="text-xl font-bold text-gray-800 mb-2">Presisi Tinggi</h4>
-                <p class="text-gray-500">Didesain dengan tingkat akurasi maksimal untuk kebutuhan operasional harian.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-2">High Precision</h4>
+                <p class="text-gray-500">Designed with maximum accuracy for daily operational needs.</p>
                 <div class="mt-4 h-1 w-12 bg-indigo-600 ml-auto"></div>
             </div>
             <div class="text-right">
-                <h4 class="text-xl font-bold text-gray-800 mb-2">Material Premium</h4>
-                <p class="text-gray-500">Menggunakan bahan tahan karat standar medis internasional (ISO).</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-2">Premium Material</h4>
+                <p class="text-gray-500">Uses international medical standard stainless material (ISO).</p>
                 <div class="mt-4 h-1 w-12 bg-indigo-600 ml-auto"></div>
             </div>
         </div>
@@ -51,13 +51,13 @@
         <!-- Kolom Kanan: Fitur -->
         <div class="order-3 flex flex-col space-y-12">
             <div class="text-left">
-                <h4 class="text-xl font-bold text-gray-800 mb-2">Desain Ergonomis</h4>
-                <p class="text-gray-500">Memberikan kenyamanan maksimal bagi praktisi dan pasien selama prosedur.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-2">Ergonomic Design</h4>
+                <p class="text-gray-500">Provides maximum comfort for practitioners and patients during procedures.</p>
                 <div class="mt-4 h-1 w-12 bg-indigo-600 mr-auto"></div>
             </div>
             <div class="text-left">
-                <h4 class="text-xl font-bold text-gray-800 mb-2">Maintenance Mudah</h4>
-                <p class="text-gray-500">Struktur komponen modular yang memudahkan pembersihan dan perawatan.</p>
+                <h4 class="text-xl font-bold text-gray-800 mb-2">Easy Maintenance</h4>
+                <p class="text-gray-500">Modular component structure that facilitates cleaning and maintenance.</p>
                 <div class="mt-4 h-1 w-12 bg-indigo-600 mr-auto"></div>
             </div>
         </div>
@@ -83,7 +83,7 @@
     <div class="max-w-4xl mx-auto bg-orange-500 rounded-3xl p-10 lg:p-16 border border-gray-100">
         <h3 class="text-3xl font-bold text-white mb-6">Product Description</h3>
         <div class="prose prose-indigo max-w-none text-gray-100 leading-loose">
-            {!! nl2br(e($product->description ?? 'Deskripsi detail produk akan segera diperbarui.')) !!}
+            {!! nl2br(e($product->description ?? 'Detailed product description will be updated soon.')) !!}
         </div>
     </div>
 

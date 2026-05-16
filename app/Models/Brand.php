@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Brand extends Model
 {
-    protected $fillable = ['name', 'logo_path'];
+    protected $fillable = ['name', 'logo_path', 'tagline', 'description'];
 
     public function products(): HasMany
     {

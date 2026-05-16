@@ -42,11 +42,14 @@
                     <td class="border p-2">{{ $brand->name }}</td>
                     <td class="border p-2 text-center">{{ $brand->products_count }}</td>
                     <td class="border p-2 text-center">
-                        <form action="{{ route('admin.brands.destroy', $brand->id) }}" method="POST" onsubmit="return confirm('Hapus brand ini? Semua produk terkait juga akan terhapus.')">
-                            @csrf
-                            @method('DELETE')
-                            <button class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Hapus</button>
-                        </form>
+                        <div class="flex justify-center items-center space-x-2">
+                            <a href="{{ route('admin.brands.edit', $brand->id) }}" class="bg-blue-500 text-white px-3 py-1 rounded text-sm hover:bg-blue-600">Edit</a>
+                            <form action="{{ route('admin.brands.destroy', $brand->id) }}" method="POST" onsubmit="return confirm('Hapus brand ini? Semua produk terkait juga akan terhapus.')">
+                                @csrf
+                                @method('DELETE')
+                                <button class="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600">Hapus</button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 @empty

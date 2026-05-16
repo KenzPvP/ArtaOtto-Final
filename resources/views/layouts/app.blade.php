@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtaOtto - Dental Product Specialist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <meta name="description" content="ArtaOtto - Specialist provider of high-quality dental tools and products for clinics and professionals in Indonesia.">
+    <meta name="keywords" content="artaotto, dental products, dental equipment, dental supplier, jakarta">
+    <meta name="author" content="ArtaOtto">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="ArtaOtto - Dental Product Specialist">
+    <meta property="og:description" content="Specialist provider of high-quality dental tools and products.">
+    <meta property="og:image" content="{{ asset('images/LogoArtaWarna.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="ArtaOtto - Dental Product Specialist">
+    <meta property="twitter:description" content="Specialist provider of high-quality dental tools and products.">
+    <meta property="twitter:image" content="{{ asset('images/LogoArtaWarna.png') }}">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
     <style>
         .nav-link { @apply text-gray-600 hover:text-indigo-600 font-medium transition-colors; }
         .footer-link { @apply text-gray-400 hover:text-white transition-colors; }
@@ -55,7 +75,7 @@
                             </div>
                         </div>
 
-                        <a href="{{ route('pages.customer_service') }}" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Contact us</a>
+                        
                 </div>
 
                 <!-- Right Side (Contact Us) -->
@@ -91,7 +111,7 @@
                 <div>
                     <h2 class="text-3xl font-black text-indigo-400 mb-6 tracking-tighter italic uppercase">ArtaOtto</h2>
                     <p class="text-gray-400 leading-relaxed mb-4">
-                        Spesialis penyedia alat dan produk kedokteran gigi berkualitas tinggi untuk klinik dan profesional.
+                        Specialist provider of high-quality dental tools and products for clinics and professionals.
                     </p>
                     <p class="text-gray-400">
                         Jl. Dental Raya No. 123, Jakarta Selatan<br>
@@ -101,7 +121,7 @@
 
                 <!-- Bagian 2: Menu -->
                 <div>
-                    <h3 class="text-lg font-bold mb-6 uppercase tracking-widest text-indigo-200">Menu Utama</h3>
+                    <h3 class="text-lg font-bold mb-6 uppercase tracking-widest text-indigo-200">Main Menu</h3>
                     <ul class="space-y-4">
                         <li><a href="{{ route('pages.about') }}" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
                         <li><a href="{{ route('products.index') }}" class="text-gray-400 hover:text-white transition-colors">Product lineup</a></li>

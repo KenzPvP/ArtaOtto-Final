@@ -15,8 +15,8 @@ class ProductController extends Controller
 
     public function home()
     {
-        // Ambil 6 produk terbaru yang tidak hidden
-        $products = Product::with(['brand', 'images'])->visible()->latest()->take(6)->get();
+        // Ambil 6 produk pertama (tertua) yang tidak hidden
+        $products = Product::with(['brand', 'images'])->visible()->oldest()->take(6)->get();
 
         return view('home', compact('products'));
     }
@@ -24,8 +24,10 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         // Fitur 10: Ambil semua Brand yang memiliki produk visible (Line Up Page)
-        $brands = Brand::with(['products' => function($query) {
-            $query->visible()->latest();
+        $brands = Brand::whereHas('products', function($query) {
+            $query->visible();
+        })->with(['products' => function($query) {
+            $query->visible()->oldest();
         }])->get();
 
         return view('products.index', compact('brands'));
@@ -58,10 +60,10 @@ class ProductController extends Controller
         // Load all brands with their products
         // Grouping logic handled in the view or controller
         $brands = Brand::with(['products' => function($query) {
-            $query->latest();
+            $query->oldest();
         }])->get();
         // Fallback for products without brands (if any, though db requires it)
-        $ungroupedProducts = Product::whereNull('brand_id')->latest()->get();
+        $ungroupedProducts = Product::whereNull('brand_id')->oldest()->get();
 
         return view('admin.dashboard', compact('brands', 'ungroupedProducts'));
     }

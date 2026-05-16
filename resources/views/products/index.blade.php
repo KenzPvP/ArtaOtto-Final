@@ -5,21 +5,49 @@
     
     <!-- Hero Section / Title -->
     <div class="mb-16 text-center">
-        <h1 class="text-5xl font-black text-gray-900 mb-4 uppercase tracking-tighter">Line Up Product</h1>
-        <p class="text-gray-500 text-lg">Temukan solusi dental terbaik dari mitra brand terpercaya kami.</p>
+        <h1 class="text-5xl font-black text-gray-900 mb-4 uppercase tracking-tighter">Our Brands</h1>
         
     </div>
 
     @forelse($brands as $brand)
-        @if($brand->products->count() > 0)
         <!-- Brand Section -->
         <div class="mb-24">
-            <a href="{{ route('brands.public.show', $brand->id) }}" class="flex items-center space-x-4 mb-8 group">
-                @if($brand->logo_path)
-                    <img src="{{ asset('storage/' . $brand->logo_path) }}" alt="{{ $brand->name }}" class="h-12 object-contain bg-white p-2 rounded shadow-sm border transition-transform group-hover:scale-110">
-                @endif
-                <h2 class="text-3xl font-bold text-gray-800 uppercase tracking-tight border-l-4 border-indigo-600 pl-4 group-hover:text-indigo-600 transition-colors">{{ $brand->name }}</h2>
-            </a>
+            <!-- Brand Profile Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-10 transition-shadow hover:shadow-md">
+                <div class="flex flex-col md:flex-row items-center md:items-stretch">
+                    <!-- Logo Section (Left) -->
+                    <div class="w-full md:w-1/3 flex-shrink-0 bg-gray-50 flex items-center justify-center p-8 border-b md:border-b-0 md:border-r border-gray-100">
+                        @if($brand->logo_path)
+                            <img src="{{ asset('storage/' . $brand->logo_path) }}" alt="{{ $brand->name }} Logo" class="max-h-50 object-contain transition-transform duration-300 hover:scale-105">
+                        @else
+                            <div class="h-32 flex items-center justify-center">
+                                <span class="text-3xl font-black text-gray-300 uppercase tracking-widest text-center">{{ $brand->name }}</span>
+                            </div>
+                        @endif
+                    </div>
+                    
+                    <!-- Description Section (Right) -->
+                    <div class="w-full md:w-2/3 p-8 flex flex-col justify-center">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-3xl font-bold text-gray-900 uppercase tracking-tight">{{ $brand->name }}</h2>
+                            <a href="{{ route('brands.public.show', $brand->id) }}" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800 flex items-center transition-colors">
+                                View Brand
+                                <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                        </div>
+                        
+                        @if($brand->tagline)
+                            <p class="text-lg font-medium text-indigo-600 mb-3">{{ $brand->tagline }}</p>
+                        @endif
+                        
+                        @if($brand->description)
+                            <p class="text-gray-600 leading-relaxed">{{ $brand->description }}</p>
+                        @else
+                            <p class="text-gray-400 italic text-sm">Brand description not available.</p>
+                        @endif
+                    </div>
+                </div>
+            </div>
 
             <!-- Product Display Logic (Fitur: Slider vs Grid) -->
             @php $productCount = $brand->products->count(); @endphp
@@ -58,10 +86,9 @@
                 </div>
             @endif
         </div>
-        @endif
     @empty
         <div class="text-center py-24 bg-gray-50 rounded-3xl border-2 border-dashed">
-            <p class="text-gray-400">Belum ada brand atau produk yang tersedia saat ini.</p>
+            <p class="text-gray-400">No brands or products are currently available.</p>
         </div>
     @endforelse
 

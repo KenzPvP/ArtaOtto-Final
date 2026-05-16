@@ -14,7 +14,7 @@
                     </h1>
 
                     <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        {{ getSetting('hero_desc', 'Kami adalah mitra strategis Anda dalam menyediakan peralatan kedokteran gigi tercanggih. Dengan fokus pada kualitas dan inovasi, kami memastikan setiap klinik memiliki instrumen terbaik.') }}
+                        {{ getSetting('hero_desc', 'We partner with Indonesian dentists to bring carefully selected orthodontic products from global manufacturers closer to their practices. Beyond providing high-quality products, we support doctors with clear product information, responsive communication, and practical assistance before and after purchase.') }}
                     </p>
 
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
@@ -125,7 +125,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-white uppercase tracking-tighter mb-4">Kenapa pilih kami?</h2>
+                <h2 class="text-4xl font-black text-white uppercase tracking-tighter mb-4">Why Choose Us?</h2>
                 <div class="h-1.5 w-24 bg-white mx-auto rounded-full"></div>
             </div>
 
@@ -134,34 +134,37 @@
                 <!-- Card 1 -->
                 <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl transition-all hover:-translate-y-2">
                     <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center text-indigo-600 mb-6">
-                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+	                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24">
+		                    <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z" />
+	                    </svg>
+
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">10+ Experience</h3>
-                    <p class="text-gray-500">Lebih dari satu dekade melayani kebutuhan dental di Indonesia.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Orthodontic Focus</h3>
+                    <p class="text-gray-500">We focus on orthodontic products, allowing us to better understand the needs of orthodontists and their clinical preferences.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl transition-all hover:-translate-y-2 lg:translate-y-8">
                     <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 mb-6">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Quality Product</h3>
-                    <p class="text-gray-500">Hanya menyediakan produk dengan standar kualitas internasional terbaik.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Curated Global Products</h3>
+                    <p class="text-gray-500">We bring carefully selected orthodontic products from international manufacturers closer to Indonesian practices.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl transition-all hover:-translate-y-2">
                     <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-yellow-600 mb-6">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">ISO Certified</h3>
-                    <p class="text-gray-500">Seluruh operasional kami telah tersertifikasi standar manajemen mutu.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Responsive Local Support</h3>
+                    <p class="text-gray-500">We support dentists with clear product information, trial assistance, ordering support, and practical aftersales communication.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl transition-all hover:-translate-y-2 lg:translate-y-8">
                     <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-red-600 mb-6">
                         <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Expert Team</h3>
-                    <p class="text-gray-500">Dukungan tim teknisi dan konsultan yang ahli di bidang kedokteran gigi.</p>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-800">Clinically Relevant Selection</h3>
+                    <p class="text-gray-500">We select products based on their relevance to orthodontic practice, patient needs, and everyday clinical workflow.</p>
                 </div>
             </div>
         </div>
@@ -207,7 +210,7 @@
                 <div>
                     <h2 class="text-5xl font-black mb-8 uppercase tracking-tighter">Get In Touch</h2>
                     <p class="text-orange-100 text-lg mb-12 leading-relaxed">
-                        {{ getSetting('contact_info', 'Punya pertanyaan mengenai produk atau butuh penawaran khusus untuk klinik Anda? Tim kami siap memberikan solusi terbaik. Hubungi kami melalui detail di bawah atau isi formulir pesan.') }}
+                        {{ getSetting('contact_info', 'Have questions about our products? Our team is ready to help you with product information and availability. Contact us through the details below or send us a message through the form.') }}
                     </p>
                     
                     <div class="space-y-8">
@@ -255,24 +258,84 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-6">
+                    <h3 class="text-2xl font-black uppercase tracking-tight text-gray-900 mb-6">Send Us an Inquiry</h3>
+
+                    <form action="{{ route('contact.send') }}" method="POST" class="space-y-4">
                         @csrf
-                        <div>
-                            <label class="block text-sm font-bold text-gray-600 uppercase mb-2">Name</label>
-                            <input type="text" name="name" value="{{ old('name') }}" placeholder="Your Full Name" class="w-full bg-gray-50 border {{ $errors->has('name') ? 'border-red-400' : 'border-gray-200' }} p-4 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all">
-                            @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+
+                        {{-- Row 1: Name & WhatsApp --}}
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Full Name</label>
+                                <input type="text" name="name" value="{{ old('name') }}" placeholder="Your full name"
+                                    class="w-full bg-gray-50 border {{ $errors->has('name') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm">
+                                @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">WhatsApp Number</label>
+                                <input type="text" name="whatsapp" value="{{ old('whatsapp') }}" placeholder="08xxxxxxxxxx"
+                                    class="w-full bg-gray-50 border {{ $errors->has('whatsapp') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm">
+                                @error('whatsapp') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
                         </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gray-600 uppercase mb-2">Email</label>
-                            <input type="email" name="email" value="{{ old('email') }}" placeholder="email@address.com" class="w-full bg-gray-50 border {{ $errors->has('email') ? 'border-red-400' : 'border-gray-200' }} p-4 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all">
-                            @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+
+                        {{-- Row 2: Email & Clinic --}}
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Email</label>
+                                <input type="email" name="email" value="{{ old('email') }}" placeholder="you@clinic.com"
+                                    class="w-full bg-gray-50 border {{ $errors->has('email') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm">
+                                @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Clinic / Institution</label>
+                                <input type="text" name="clinic" value="{{ old('clinic') }}" placeholder="Name of your clinic or institution"
+                                    class="w-full bg-gray-50 border {{ $errors->has('clinic') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm">
+                                @error('clinic') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
                         </div>
+
+                        {{-- Row 3: Profession & Inquiry Type --}}
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Profession / Role</label>
+                                <select name="profession"
+                                    class="w-full bg-gray-50 border {{ $errors->has('profession') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm appearance-none cursor-pointer">
+                                    <option value="" disabled {{ old('profession') ? '' : 'selected' }}>Select your role</option>
+                                    <option value="Orthodontist"                        {{ old('profession') == 'Orthodontist' ? 'selected' : '' }}>Orthodontist</option>
+                                    <option value="Dentist"                             {{ old('profession') == 'Dentist' ? 'selected' : '' }}>Dentist</option>
+                                    <option value="Orthodontic Resident"                {{ old('profession') == 'Orthodontic Resident' ? 'selected' : '' }}>Orthodontic Resident</option>
+                                    <option value="Clinic Owner / Manager"              {{ old('profession') == 'Clinic Owner / Manager' ? 'selected' : '' }}>Clinic Owner / Manager</option>
+                                    <option value="Dental Procurement / Purchasing Team" {{ old('profession') == 'Dental Procurement / Purchasing Team' ? 'selected' : '' }}>Dental Procurement / Purchasing Team</option>
+                                    <option value="Dental Student"                      {{ old('profession') == 'Dental Student' ? 'selected' : '' }}>Dental Student</option>
+                                    <option value="Other"                               {{ old('profession') == 'Other' ? 'selected' : '' }}>Other</option>
+                                </select>
+                                @error('profession') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Inquiry Type</label>
+                                <select name="inquiry_type"
+                                    class="w-full bg-gray-50 border {{ $errors->has('inquiry_type') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all text-sm appearance-none cursor-pointer">
+                                    <option value="" disabled {{ old('inquiry_type') ? '' : 'selected' }}>Select inquiry type</option>
+                                    <option value="Product Information"     {{ old('inquiry_type') == 'Product Information' ? 'selected' : '' }}>Product Information</option>
+                                    <option value="Price List Request"      {{ old('inquiry_type') == 'Price List Request' ? 'selected' : '' }}>Price List Request</option>
+                                    <option value="Product Availability"    {{ old('inquiry_type') == 'Product Availability' ? 'selected' : '' }}>Product Availability</option>
+                                    <option value="After-Sales Support"     {{ old('inquiry_type') == 'After-Sales Support' ? 'selected' : '' }}>After-Sales Support</option>
+                                    <option value="Other"                   {{ old('inquiry_type') == 'Other' ? 'selected' : '' }}>Other</option>
+                                </select>
+                                @error('inquiry_type') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
+                            </div>
+                        </div>
+
+                        {{-- Message --}}
                         <div>
-                            <label class="block text-sm font-bold text-gray-600 uppercase mb-2">Message</label>
-                            <textarea rows="4" name="message" placeholder="Tell us about your needs..." class="w-full bg-gray-50 border {{ $errors->has('message') ? 'border-red-400' : 'border-gray-200' }} p-4 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all resize-none">{{ old('message') }}</textarea>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wide mb-1.5">Message</label>
+                            <textarea rows="4" name="message" placeholder="Tell us about your needs..."
+                                class="w-full bg-gray-50 border {{ $errors->has('message') ? 'border-red-400' : 'border-gray-200' }} p-3.5 rounded-xl focus:ring-2 focus:ring-orange-500 outline-none transition-all resize-none text-sm">{{ old('message') }}</textarea>
                             @error('message') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
-                        <button type="submit" class="w-full bg-orange-600 text-white font-bold py-4 rounded-xl hover:bg-orange-700 shadow-lg active:scale-95 transition-all text-lg">
+
+                        <button type="submit" class="w-full bg-orange-600 text-white font-bold py-4 rounded-xl hover:bg-orange-700 shadow-lg active:scale-95 transition-all text-base uppercase tracking-wide">
                             Send Message
                         </button>
                     </form>
